@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .abc {
+            color: red
+        }
+        .abc span { /* komentaras - cia yra selektorius */
+            color: blue
+        }
+        .abc span.xxx {
+            font-size: 30px
+        }
+        .xxx {
+            background-color: silver;
+        }
+        .abc span:first-child {
+            font-weight:bold ;
+        }
+        .abc span:last-child {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p class="abc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, <span> error facere incidunt </span> laboriosam molestias quaerat quis similique temporibus! <span class="xxx"> Alias deleniti</span> doloribus, in nam omnis perferendis recusandae <span>rem </span>tempore vel velit.
+</p>
+<p>labas <span class="xxx">rytas</span> </p>
+</body>
+</html>
