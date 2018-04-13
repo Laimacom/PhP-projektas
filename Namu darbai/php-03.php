@@ -8,11 +8,10 @@ $m = [
     'elementas5' => 5,
 ];
 
-foreach($m as $sk){
-    if ($sk & 1) {
-        echo $m = 0, '<br>';
-    }
-    else {
-        echo $sk, '<br>';
+foreach($m as $key => $sk){
+    if ($sk % 2 != 0) {
+        $m[$key] = 0;
     }
 }
+
+var_dump ($m);
