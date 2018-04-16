@@ -7,7 +7,7 @@ $m = ['Dramblys', 'Liutas', 'Zirafa', 'Gorila', 'Zebras', 'Gyvate', 'Meska', 'Ko
 
 
 $a = 'a';
-$naujasmasyvas = [];
+//$naujasmasyvas = [];
 for ($i = 0; $i <count($m); $i++){
     if (strpos($m[$i], $a) !==false) {
         $naujasmasyvas[] = $m[$i];
