@@ -1,4 +1,7 @@
 <?php
+/**
+Sukurkite skaičių masyvą. Panaudodami foreach ciklą susumuokite lyginius skaičius ir paskaičiuokite šių skaičių vidurkį.  Pademonstruokite rezultatą.
+ */
 
 $m = [1, 2, 3, 4, 5];
 
