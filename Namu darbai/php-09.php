@@ -5,4 +5,10 @@ Sukurkite skaičių masyvą. Sukurkite funkciją, kuri atsitiktiniu būdu graži
 
 $m =[2, 4, 8, 15, 19, 3];
 
-var_dump($m);
+function x($m){
+    $sk = array_rand($m);
+    echo $m[$sk];
+}
+
+x($m);    //taip kvieciam funkcija, kad ji pradetu veikti
+
