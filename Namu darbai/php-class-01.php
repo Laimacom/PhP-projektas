@@ -8,9 +8,9 @@ class automobilis{
     public $mod;
     public $met;
     function __construct($gm, $md, $mt){
-        $this->gam= $gm;
-        $this->mod= $md;
-        $this->met= $mt;
+        $this->gam = $gm;
+        $this->mod = $md;
+        $this->met = $mt;
     }
     function getinfo(){
         $s  = "Automobilis: %s, %s, %s.";
