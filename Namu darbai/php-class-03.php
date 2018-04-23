@@ -6,7 +6,7 @@ Sukurti klasę darbuotojai, kurioje yra savybė skirta darbuotojų sąrašui sau
 class darbuotojai{
     private $darb = [];
     function sarasas($ak, $pv, $pr, $at){
-        $this->darb[] = [
+        $this->darb[$ak] = [     //irasyti pagal ka bus pasalinta $ak
             'asmk' => $ak,
             'pavvard' => $pv,
             'par' => $pr,
@@ -14,7 +14,7 @@ class darbuotojai{
         ];
     }
 
-    function pasalinti($ak){               //kodel neveikia?
+    function pasalinti($ak){
         unset($this->darb[$ak]);
         }
 }
@@ -24,7 +24,6 @@ $o->sarasas('38605257596', 'Petraitis Petras', 'vadybininkas', 1500);
 $o->sarasas('38409240902', 'Antanaitis Antanas', 'darbininkas', 1000);
 $o->sarasas('38112120987', 'Zigmaitis Zigmas', 'darbininkas', 1000);
 var_dump($o);
-
 
 $o->pasalinti('38409240902');
 var_dump($o);
