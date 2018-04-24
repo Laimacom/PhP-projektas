@@ -9,27 +9,28 @@ class akcininkai{
         $this->akc[] = [
             'var' => $vr,
             'pav' => $pv,
-            'aksk' => $ak
+            'akc' => $ak
         ];
-        usort($this->akc, function ($a, $b) {
-            if ($a['ak'] > $b['ak']) return -1;
-            elseif ($a['ak'] < $b['ak']) return 1;
+        usort($this->akc, function($a, $b){
+            if ($a['akc'] > $b['akc']) return -1;
+            elseif ($a['akc'] < $b['akc']) return 1;
             else 0;
         });
     }
     function info(){
         $sum = 0;
-        foreach ($this->akc as $a){
-            $sum += $a['ak'];
+        foreach($this->akc as $a){
+            $sum += $a['akc'];
         }
         echo '<table>';
         foreach ($this->akc as $a){
             echo '<tr>';
-            echo '<td>' . $a['vr'] . '</td>';
-            echo '<td>' . $a['pv'] . '</td>';
-            echo '<td>' . round((($a['ak']) / $sum) * 100, 1) . '%</td>';
-
+            echo '<td>' . $a['var'] . '</td>';
+            echo '<td>' . $a['pav'] . '</td>';
+            echo '<td>' . round(($a['akc'] / $sum) * 100, 1) . '%</td>';
+            echo '</tr>';
         }
+        echo '</table>';
     }
 }
 
