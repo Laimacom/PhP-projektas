@@ -13,18 +13,26 @@ class automobiliai{
         ];
     }
     function kurovidurkisDyzelis(){
-        $m = 0;
+        $suma = 0;
+        $kiekis = 0;
         foreach ($this->sarasas as $a) {
-            if ($a['kuras'] == 'Dyzelis') $m++;
+            if ($a['kuras'] == 'Dyzelis') {
+                $suma += $a['sanaudos'];
+                $kiekis++;
+            }
         }
-        return $m;
+        return $suma / $kiekis;
     }
     function kurovidurkisBenzinas(){
-        $m = 0;
+        $suma = 0;
+        $kiekis = 0;
         foreach ($this->sarasas as $a) {
-            if ($a['kuras'] == 'Benzinas') $m++;
+            if ($a['kuras'] == 'Benzinas') {
+                $suma += $a['sanaudos'];
+                $kiekis++;
+            }
         }
-        return $m;
+        return $suma / $kiekis;
     }
 }
 
@@ -36,6 +44,6 @@ $o->automobilis('Seat', 'Ibiza', 'Benzinas', 7);
 
 var_dump($o);
 
-echo 'Moteru yra: ' . $o->kiekMoteru();
+echo 'Dyzeliniu automobiliu kuro sanaudos yra: ' . $o->kurovidurkisDyzelis();
 echo '<br>';
-echo 'Vyru yra: ' . $o->kiekVyru();
+echo 'Benzininiu automobiliu kuro sanaudos yra: ' . $o->kurovidurkisBenzinas();
