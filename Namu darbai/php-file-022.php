@@ -3,10 +3,14 @@
 Tekstinio redaktoriaus pagalba sukurti failą su teleloto skaičiais (5 x 5). Parašyto PHP skriptą, kuris nuskaito failą ir išveda ekrane teleloto lentelę (5 x 5).
  */
 
-$f = fopen('php-file-02-lentele.txt', 'r');
-$s = fread($f, filesize('php-file-02-lentele.txt'));
+$f = fopen('php-file-02-lentele2.txt', 'r');
+$s = fread($f, filesize('php-file-02-lentele2.txt'));
 fclose($f);
-$m = json_decode($s);
+$m = explode("\r\n", $s);  //zymi eiluciu pabaigas windows
+for ($i = 0; $i<count($m); $i++){
+    $m[$i] = explode(' ', $m[$i]);
+}
+//var_dump($m);
 echo '<table>';
 foreach($m as $row){
     echo '<tr>';
