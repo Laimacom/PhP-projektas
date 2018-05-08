@@ -7,16 +7,18 @@ class forma {
 
     }
     function add(){ // papildyti asmenų db lentele
-        $res = $this->cnn->prepare("insert into aaa (aaa_vardas, aaa_lytis) values(:vardas, :lytis)");
-        $res->execute([':vardas'=>$_POST['vardas'],':lytis'=>$_POST['lytis']]);
+        $res = $this->cnn->prepare("insert into sal (sal_pavadinimas, sal_sostine, sal_gyventojai, sal_tipas) values(:pavadinimas, :sostine, :gyventojai, :tipas)");
+        $res->execute([':pavadinimas'=>$_POST['pavadinimas'],':sostine'=>$_POST['sostine'],':gyventojai'=>$_POST['gyventojai'],':tipas'=>$_POST['tipas']]);
     }
     function info(){   // asmenų db lenteles atvaizdavimas lentele
-        $res = $this->cnn->query("select * from aaa order by aaa_id");
+        $res = $this->cnn->query("select * from sal order by sal_gyventojai DESC limit 3"); //desc rusiuoja atvirkscia tvarka
         echo '<table>';
         while ($row = $res->fetch()) {
             echo '<tr>';
-            echo '<td>' . $row['aaa_vardas'] . '</td>';
-            echo '<td>' . $row['aaa_lytis'] . '</td>';
+            echo '<td>' . $row['sal_pavadinimas'] . '</td>';
+            echo '<td>' . $row['sal_sostine'] . '</td>';
+            echo '<td>' . $row['sal_gyventojai'] . '</td>';
+            echo '<td>' . $row['sal_tipas'] . '</td>';
             echo '</tr>';
         }
         echo '</table>';
@@ -28,7 +30,7 @@ try {
     $o->info(); // atvaizduoti asmenų sąrašą lentele
 }
 catch(PDOException $e){     //irgi prie klaidu gaudymo
-        echo $e->getMessage();
-    }
+    echo $e->getMessage();
+}
 
-echo '<a href="frontend-post-db.html">Atgal</a>';
+echo '<a href="12.2-frontend.html">Atgal</a>';
