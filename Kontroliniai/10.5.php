@@ -21,7 +21,7 @@ class studentai
             if ($a['fizika']>=5 and
             $a['matematika']>=5 and
             $a['programavimas']>=5)
-            $x[] = $a['vardas'];
+            $x[] = $a['vardas']; // nepamirsti prie X [], nes masyvas
         }
         return $x;
     }
