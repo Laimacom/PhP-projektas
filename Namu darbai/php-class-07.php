@@ -14,7 +14,7 @@ class asmuo {
         $this->pav = $pv;
         $this->amz = $am;
     }
-    function info (){
+    function getinfo (){
         $s  = "%s, %s, %s";
         echo sprintf($s, $this->var, $this->pav, $this->amz) . '<br>';
     }
@@ -23,20 +23,20 @@ class asmuo {
 class darbuotojas extends asmuo {
     function info ($par, $atl){
         $s  = "Darbuotojas: %s, %s, %s, %s, %s.";
-        echo sprintf($s, $this->var, $this->pav, $this->amz, $this->par, $this->atl) . '<br>';
+        echo sprintf($s, $this->var, $this->pav, $this->amz, $par, $atl) . '<br>';
     }
 }
 class studentas extends asmuo {
-    function info (){
+    function info ($spec){
         $s  = "Studentas: %s, %s, %s, %s.";
-        echo sprintf($s, $this->var, $this->pav, $this->amz, $this->spec) . '<br>';
+        echo sprintf($s, $this->var, $this->pav, $this->amz, $spec) . '<br>';
     }
 }
 
 
-$o = new asmuo('Zigmas', 'Zigmaitis', 30, '', '', '');
-$o->info();
-$o = new darbuotojas('Jonas', 'Jonaitis', 30, 'direktorius', 2000, '');
-$o->info();
-$o = new studentas('Petras', 'Petraitis', 22, '', '', 'Ekonomika');
-$o->info();
+$o = new asmuo('Zigmas', 'Zigmaitis', 30);
+$o->getinfo();
+$o = new darbuotojas('Jonas', 'Jonaitis', 30);
+$o->info('direktorius', 2000);
+$o = new studentas('Petras', 'Petraitis', 22);
+$o->info('ekonomika');

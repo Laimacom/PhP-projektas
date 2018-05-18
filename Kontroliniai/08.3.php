@@ -16,11 +16,7 @@ class preke
         $this->kaina = $kai;
     }
 
-    function getinfo(){
-        $s = "%s, %s, %s.";
-        echo sprintf($s, $this->kodas, $this->pavadinimas, $this->kaina) . '<br>';
-    }
 }
 
 $o = new preke('836483', 'Pienas', '1');
-$o->getinfo();
+var_dump($o);
