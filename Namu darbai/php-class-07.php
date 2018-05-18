@@ -7,18 +7,12 @@ class asmuo {
     public $var;
     public $pav;
     public $amz;
-    public $par;
-    public $atl;
-    public $spec;
 
-    function __construct($vr, $pv, $am, $pr, $at, $sp)
+    function __construct($vr, $pv, $am)
     {
         $this->var = $vr;
         $this->pav = $pv;
         $this->amz = $am;
-        $this->par = $pr;
-        $this->atl = $at;
-        $this->spec = $sp;
     }
     function info (){
         $s  = "%s, %s, %s";
@@ -27,7 +21,7 @@ class asmuo {
 }
 
 class darbuotojas extends asmuo {
-    function info (){
+    function info ($par, $atl){
         $s  = "Darbuotojas: %s, %s, %s, %s, %s.";
         echo sprintf($s, $this->var, $this->pav, $this->amz, $this->par, $this->atl) . '<br>';
     }

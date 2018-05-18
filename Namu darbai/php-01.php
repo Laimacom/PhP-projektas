@@ -1,4 +1,7 @@
 <?php
+/*
+Sukurkite PHP skriptą, kuriame būtų aprašyti keturi kintamieji ir ekrane būtų išvestas tų kintamųjų sumos šaknis.
+*/
 
 /*$x = [1, 4, 5, 6];
 $suma = 0;
