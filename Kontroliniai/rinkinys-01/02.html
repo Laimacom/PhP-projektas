@@ -1,0 +1,45 @@
+
+<!--
+Sukurkite HTML dokumentą, kurio <head> skiltyje būtų aprašytas stilius. Visas dokumento fonas - paveikslėlis, teksto dydis 18px ir balta spalva. Dokumente turėtų būti išvesta 2x2 lentelė sudaryta iš <div> elementų, t.y. Div langeliai - div eilutėse, o šios - pagrindiniam div elemente. Eilutės lentelėje turi būti su paraštėmis 3px, langeliai lentelėse savo ruožtu taip pat su 8px paraštėmis. Langelių fono spalva turi būti mėlyna, teksto spalva balta..
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url('https://www.codeacademy.lt/wp-content/uploads/2017/05/logo.png');
+            font-size: 18px;
+            background-color: white;
+        }
+        .table {
+            display: table;
+            width: 100%;
+        }
+        .row {
+            display:table-row;
+            padding: 3px;
+        }
+        .cell {
+            display: table-cell;
+            padding: 8px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda placeat porro suscipit voluptate? Adipisci enim error et, eum, excepturi, in laudantium neque obcaecati provident quia repellat sit velit voluptate?</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur dolores doloribus enim eum excepturi fugiat hic in itaque, magni molestiae nesciunt numquam officiis quam recusandae reprehenderit saepe unde voluptate.</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam animi beatae, error fugit iste itaque iusto maxime nihil odit provident qui quis rem, sed sit! Explicabo necessitatibus quasi recusandae.</div>
+    </div>
+</div>
+</body>
+</html>

@@ -12,7 +12,7 @@ class naujienos
     {
         $this->sarasas[] = [
             'data' => $dat,
-            'tekstas' => $tek,
+            'tekstas' => $tek
         ];
     }
     function info(){
@@ -21,10 +21,14 @@ class naujienos
             elseif ($a['data'] == $b['data']) return 0;
             else return -1;
         });
+       /* $i = 0;
         foreach($this->sarasas as $o){
-            $k[] = ucfirst(strtolower($o['tekstas']));
-            var_dump($k);
-        }
+            $this->sarasas[$i]['tekstas'] = ucfirst(strtolower($this->sarasas[$i]['tekstas'] ));
+            $i++;
+        }*/
+       for ($i=0; $i<count ($this->sarasas); $i++){        //tas pats su for
+           $this->sarasas[$i]['tekstas'] = ucfirst(strtolower($this->sarasas[$i]['tekstas'] ));
+       }
         echo '<table>';
         foreach ($this->sarasas as $a){
             echo '<tr>';
