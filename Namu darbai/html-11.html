@@ -1,0 +1,52 @@
+
+
+<!--
+Sukurkite HTML dokumentą, kurio <head> skiltyje būtų aprašytas stilius. Visas dokumento fonas - paveikslėlis, teksto dydis 14px ir geltona fono spalva. Teksto spalva mėlyna. Dokumente turėtų būti išvesta 2x3 lentelė sudaryta iš <div>elementų, t.y. Div langeliai - div eilutėse, o šios - pagrindiniam div elemente. Eilutės lentelėje turi būti su paraštėmis 2px, langeliai lentelėse savo ruožtu taip pat su 5px (vertikaliai) ir 10pz (horizontaliai) paraštėmis. Langelių fono spalva turi būti #f0f0f0.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url('https://www.codeacademy.lt/wp-content/uploads/2017/05/logo.png');
+            font-size: 14px;
+            background-color: yellow;
+            color: blue;
+        }
+        .table {
+            display: table;
+            width: 100%;
+        }
+        .row {
+            display:table-row;
+            padding: 2px;
+        }
+        .cell {
+            display: table-cell;
+            padding: 10px 5px;
+            border: 5px black;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda placeat porro suscipit voluptate? Adipisci enim error et, eum, excepturi, in laudantium neque obcaecati provident quia repellat sit velit voluptate?</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur dolores doloribus enim eum excepturi fugiat hic in itaque, magni molestiae nesciunt numquam officiis quam recusandae reprehenderit saepe unde voluptate.</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam animi beatae, error fugit iste itaque iusto maxime nihil odit provident qui quis rem, sed sit! Explicabo necessitatibus quasi recusandae.</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque dolores, eaque eos et explicabo nemo nisi obcaecati quia suscipit veritatis voluptates! Alias delectus eaque et ex exercitationem quo rerum?</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet animi autem commodi, cum eligendi fuga inventore minus odio porro quo, tempore! Fugit iusto non odio perferendis rem ut voluptatibus?</div>
+    </div>
+</div>
+
+</body>
+</html>
