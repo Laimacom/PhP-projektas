@@ -1,0 +1,68 @@
+<!--
+Sukurti formą, kur galima įvesti:
+1) vardas
+2) pavardė
+3) lytis (pasirinkti iš radio butonų)
+4) patiekalas (pasirinkti iš sąrašo)
+Sukurti mygtuką formoje, kurio pagalbą įdėti svečio duomenis į svečių lentelės apacią. Svečius numeruoti.
+Realizacija panaudojant jQuery.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var vardas = $('form input[name=vardas]').val();
+                var pavarde = $('form input[name=pavarde]').val();
+                var lytis = $('form input[name=lytis]').val();
+                var patiekalas = $('form select[name=patiekalas]').val();
+                $('table tbody').append('<tr><td></td><td>' + vardas + '</td><td>' + pavarde + '</td><td>' + lytis + '</td><td>' + patiekalas +'</td></tr>');
+                var m = $('table tbody tr');
+                for (var i=0; i<m.length; i++) $(m[i]).find('td:first-child').text(i + 1);
+                return false;
+            });
+        });
+    </script>
+    <style>
+        table {border-collapse: collapse}
+        td, th {
+            border:1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+    </head>
+<body>
+<form>
+    <label>Vardas</label><input type="text" name="vardas"><br>
+    <label>Pavardė</label><input type="text" name="pavarde"><br>
+    <label>Lytis:</label><br>
+    <label>Vyras</label><input type="radio" name="lytis" value="vyras"><br>
+    <label>Moteris</label><input type="radio" name="lytis" value="moteris"><br>
+    <label>Patiekalas</label>
+    <select name="patiekalas">
+        <option value="vistiena">Vištiena</option>
+        <option value="kiauliena">Kiauliena</option>
+        <option value="jautiena">Jautiena</option>
+    </select>
+    <br>
+    <button>Įdėti</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Nr.</th>
+        <th>Vardas</th>
+        <th>Pavarde</th>
+        <th>Lytis</th>
+        <th>Patiekalas</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</body>
+</html>
