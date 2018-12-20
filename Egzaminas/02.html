@@ -1,0 +1,52 @@
+
+<!--
+Sukurkite    HTML    dokumentą,    kurio    <head>     skiltyje    būtų    aprašytas     slius.     Visas     dokumento     fonas     ‐  paveikslėlis,     teksto    dydis    40px     ir     balta     spalva.    Dokumente     turėtų    bū     išvesta     3x3     lentelė     sudaryta  iš    <div>elementų,     t.y.     Div     langeliai     ‐     div    eilutėse,     o     šios     ‐    pagrindiniam     div     elemente.    Eilutės  lentelėje     turi    bū     su     paraštėmis     5px,     langeliai     lentelėse     savo     ruožtu     taip     pat     su    5px     paraštėmis.  Langelių     fono     spalva     turi     bū     lightgreen.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url('https://www.codeacademy.lt/wp-content/uploads/2017/05/logo.png');
+            font-size: 40px;
+            background-color: white;
+        }
+        .table {
+            display: table;
+            width: 100%;
+            border-spacing: 1px;
+        }
+        .row {
+            display:table-row;
+            padding: 5px;
+        }
+        .cell {
+            display: table-cell;
+            padding: 5px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda placeat porro suscipit voluptate? Adipisci enim error et, eum, excepturi, in laudantium neque obcaecati provident quia repellat sit velit voluptate?</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda placeat porro suscipit voluptate? Adipisci enim error et, eum, excepturi, in laudantium neque obcaecati provident quia repellat sit velit voluptate?</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+    </div>
+    <div class="row">
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda placeat porro suscipit voluptate? Adipisci enim error et, eum, excepturi, in laudantium neque obcaecati provident quia repellat sit velit voluptate?</div>
+        <div class="cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam corporis debitis delectus et in incidunt ipsam itaque omnis, similique ullam ut veniam. Esse ex id molestiae, optio repellendus suscipit!</div>
+    </div>
+</div>
+</body>
+</html>
