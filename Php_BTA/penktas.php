@@ -1,10 +1,8 @@
 <?php
 $n = [
-    [1,4,23,56,34],
-    [33,47,27,78,46],
-    [11,24,45,69,33],
-    [23,22,33,44,55],
-    [77,88,99,26,8]
+    [3,4,6,4],
+    [5,6,2,1],
+    [1,4,7,5],
 ];
 
 echo '<table>';
@@ -16,17 +14,17 @@ for ($i = 0; $i<count($n); $i++){
     echo '</tr>';
 }
 echo '</table>';
-
 echo '<br>';
 
-$sum=[];
-
-for ($i = 0; $i < count($n); $i++){
-    $sum[$i] = 0;
-    for ($j = 0; $j < count($n[0]); $j++) {
-        $sum[$i] += $n[$j][$i];
+$sum = [];
+for ($i = 0; $i < count($n); $i++){      //suka tiek kartu, kiek yra eiluciu
+  //panaudoti isset
+    for ($j = 0; $j < count($n[$i]); $j++) {
+        $sum[$j] += $n[$i][$j];
     }
 }
-for ($i = 0; $i < count($n); $i++){
+
+for ($i = 0; $i < count($sum); $i++){
     echo $sum[$i] . " ";
 }
+

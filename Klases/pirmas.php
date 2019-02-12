@@ -9,4 +9,4 @@ $o = new asmuo ();
 var_dump($o);
 echo $o->vardas . ' ' . $o->pavarde
  . '<br>';
- echo $o->atlyginimas;  //negalima taip isvesti, nes private
+ //echo $o->atlyginimas;  //negalima taip isvesti, nes private
