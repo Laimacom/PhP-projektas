@@ -1,0 +1,19 @@
+GET http://laimaphp.lt/testas/public/radars/create
+Accept: application/json
+
+<> 2019-02-06T013720.200.html
+
+###
+
+GET http://laimaphp.lt/testas/public/radars/create
+Accept: application/json
+
+<> 2019-02-06T124144.200.html
+
+###
+
+GET http://laimaphp.lt/testas/public/radars/create
+Accept: application/json
+
+###
+
